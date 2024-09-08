@@ -1,0 +1,110 @@
+/* Download Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --grey-shade: #fafafa;
+  --grey-shade-2: #f2f2f2;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 2px;
+  word-spacing: 2px;
+  font-size: 20px;
+}
+
+.question,
+.para {
+  text-align: left;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 1000;
+}
+
+.img-rotate {
+  transform: rotate(30deg);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  opacity: 0.5;
+}
+
+.container {
+  width: 70%;
+  height: 600px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faqs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+.icon-image {
+  width: 30px;
+  height: auto;
+  justify-self: end;
+  opacity: 0.4;
+  transition-duration: 2s;
+}
+
+.question {
+  justify-self: start;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.data-hide {
+  display: none;
+}
+
+.para {
+  transition-timing-function: ease-in-out;
+  transition-duration: 5s;
+  transition-property: all;
+  transition-delay: 0.5s;
+  grid-column: 1/-1;
+  justify-self: start;
+}
+
+.element-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 5px;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.966);
+}
+
+.article:nth-child(even) {
+  background-color: var(--grey-shade-2);
+}
+
+.article:nth-child(odd) {
+  background-color: var(--grey-shade);
+}
+
+.element-button:hover .icon-image {
+  opacity: 1;
+  background-color: aqua;
+  object-fit: cover;
+  transform: rotate(5deg);
+  transition-duration: 0.5s;
+}
