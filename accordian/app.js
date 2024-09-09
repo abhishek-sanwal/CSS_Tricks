@@ -16,9 +16,9 @@ const showFaq = (event) => {
 const handleFaq = (button, isSameButton) => {
   if (isSameButton) {
     // Collapse the current div
-    button.classList.toggle("btn");
     const paragraphs = button.querySelectorAll("p");
     const images = button.querySelectorAll("img");
+    button.classList.toggle("btn");
     handleDiv(paragraphs, images, false);
     previouslyClickedButton = null;
   } else {
@@ -58,7 +58,6 @@ const handleImages = (images, flag) => {
 };
 
 const changeOpacticy = (event) => {
-  console.log("I am working.");
   const element = event.currentTarget.querySelector("img");
   element.dispatchEvent(new Event("mouseover"));
 };
