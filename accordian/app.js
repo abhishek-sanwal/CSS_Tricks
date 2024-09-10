@@ -48,6 +48,7 @@ const handleParagraphs = (paras, flag) => {
   // Flag false means Collapse the div
   if (paras.length > 1) {
     paras[1].classList.toggle("data-hide", !flag);
+    paras[1].classList.toggle("show", flag);
   }
 };
 
@@ -57,16 +58,10 @@ const handleImages = (images, flag) => {
   if (images.length > 0) images[0].classList.toggle("img-rotate", !flag);
 };
 
-const changeOpacticy = (event) => {
-  const element = event.currentTarget.querySelector("img");
-  element.dispatchEvent(new Event("mouseover"));
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const nodes = document.querySelectorAll(".element-button");
 
   nodes.forEach((node) => {
     node.addEventListener("click", showFaq);
-    node.addEventListener("mouseover", changeOpacticy);
   });
 });

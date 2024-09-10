@@ -54,7 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 5px 10px 8px 10px #888888;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 .icon-image {
@@ -77,12 +77,13 @@ body {
 /* Not working */
 
 .para {
-  transition-timing-function: ease-in-out;
-  transition-duration: 5s;
-  transition-property: all;
-  transition-delay: 0.5s;
   grid-column: 1/-1;
   justify-self: start;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.para.show {
+  opacity: 1;
 }
 
 .element-button {
@@ -97,6 +98,7 @@ body {
   border-right: none;
   border-bottom: solid 2px #00000000;
   border-left: none;
+  border-collapse: collapse;
 }
 
 .btn {
